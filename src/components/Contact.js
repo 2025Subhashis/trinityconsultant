@@ -51,7 +51,7 @@ function Contact() {
             <div className="info-item">
               <h4>Address</h4>
               <a 
-                href="https://www.google.com/maps/search/?api=1&query=22.61,88.47" 
+                href="https://www.google.com/maps/search/?api=1&query=Trinity+Consultant%2C+New+Town%2C+Rajarhat%2C+Kolkata" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 style={{ textDecoration: 'none', color: 'inherit' }}
