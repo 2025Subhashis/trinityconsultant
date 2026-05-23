@@ -31,7 +31,7 @@ function Services() {
       id: 5,
       title: 'Training & Development',
       description: 'Upskill your workforce with industry-relevant training programs.',
-      icon: '���'
+      icon: '📚'
     },
     {
       id: 6,
