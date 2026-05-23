@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Recruitment firm website",
   "private": true,
-  "homepage": "https://2025Subhashis.github.io/trinityconsultant",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
