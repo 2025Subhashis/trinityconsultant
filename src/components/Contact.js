@@ -51,16 +51,17 @@ function Contact() {
             <div className="info-item">
               <h4>Address</h4>
               <a 
-                href="https://www.google.com/maps/search/?api=1&query=Trinity+Consultant%2C+New+Town%2C+Rajarhat%2C+Kolkata" 
+                href="https://www.google.com/maps/search/?api=1&query=Mani+Casadona+East+Tower%2C+Plot+No.+IIF%2F04%2C+Action+Area+IIF%2C+New+Town%2C+Rajarhat%2C+Kolkata%2C+West+Bengal+700156" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 style={{ textDecoration: 'none', color: 'inherit' }}
               >
                 <p className="clickable-address" style={{ cursor: 'pointer', color: '#007bff' }}>
                   Trinity Consultant<br />
+                  Mani Casadona East Tower<br />
+                  Plot No. IIF/04, Action Area IIF<br />
                   New Town, Rajarhat<br />
-                  Kolkata, West Bengal<br />
-                  India
+                  Kolkata, West Bengal 700156
                 </p>
               </a>
             </div>
