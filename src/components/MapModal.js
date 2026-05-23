@@ -18,8 +18,16 @@ const MapModal = ({ isOpen, onClose }) => {
 
       const mapplsClassObject = new mappls();
 
+      console.log("mapplsClassObject:", mapplsClassObject);
+
       mapplsClassObject.initialize(ACCESS_TOKEN, () => {
         console.log("Mappls initialized, creating map...");
+
+        if (!mapplsClassObject.Map) {
+          console.error("mapplsClassObject.Map is undefined. Check SDK initialization.");
+          return;
+        }
+
         const map = mapplsClassObject.Map({
           id: 'map-container',
           properties: {
@@ -29,7 +37,6 @@ const MapModal = ({ isOpen, onClose }) => {
         });
 
         console.log("Map object created:", map);
-
         if (map && typeof map.on === 'function') {
           mapInstance.current = map;
           map.on('load', () => {
