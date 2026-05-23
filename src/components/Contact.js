@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './Contact.css';
-import MapModal from './MapModal';
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -12,9 +11,6 @@ function Contact() {
   });
 
   const [submitted, setSubmitted] = useState(false);
-  const [isMapOpen, setIsMapOpen] = useState(false);
-
-  const toggleMap = () => setIsMapOpen(!isMapOpen);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -54,12 +50,19 @@ function Contact() {
             
             <div className="info-item">
               <h4>Address</h4>
-              <p className="clickable-address" onClick={toggleMap} style={{ cursor: 'pointer', color: '#007bff' }}>
-                Trinity Consultant<br />
-                New Town, Rajarhat<br />
-                Kolkata, West Bengal<br />
-                India
-              </p>
+              <a 
+                href="https://www.google.com/maps/search/?api=1&query=22.61,88.47" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                style={{ textDecoration: 'none', color: 'inherit' }}
+              >
+                <p className="clickable-address" style={{ cursor: 'pointer', color: '#007bff' }}>
+                  Trinity Consultant<br />
+                  New Town, Rajarhat<br />
+                  Kolkata, West Bengal<br />
+                  India
+                </p>
+              </a>
             </div>
 
             <div className="info-item">
@@ -171,7 +174,6 @@ function Contact() {
           </form>
         </div>
       </div>
-      <MapModal isOpen={isMapOpen} onClose={toggleMap} />
     </section>
   );
 }
