@@ -52,9 +52,9 @@ function Contact() {
               <h4>Address</h4>
               <p>
                 Trinity Consultant<br />
-                123 Business Avenue<br />
-                New York, NY 10001<br />
-                United States
+                Mani Casa Building<br />
+                Opposite Ecopark<br />
+                Kolkata, WB, India
               </p>
             </div>
 
@@ -70,8 +70,8 @@ function Contact() {
             <div className="info-item">
               <h4>Phone</h4>
               <p>
-                <a href="tel:+12125551234">
-                  +1 (212) 555-1234
+                <a href="tel:+919876543210">
+                  +91 98765 43210
                 </a>
               </p>
             </div>
@@ -129,7 +129,7 @@ function Contact() {
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
-                placeholder="+1 (555) 000-0000"
+                placeholder="+91 00000 00000"
               />
             </div>
 
