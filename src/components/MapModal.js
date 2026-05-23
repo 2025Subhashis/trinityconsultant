@@ -19,20 +19,19 @@ const MapModal = ({ isOpen, onClose }) => {
 
     mapplsClassObject.initialize(ACCESS_TOKEN, () => {
       mapInstance.current = mapplsClassObject.Map({
-        id: 'map-container',
-        properties: {
-          center: [22.5726, 88.3639], // Office Location
-          zoom: 15,
-        }
+      id: 'map-container',
+      properties: {
+        center: [22.61, 88.47], // Office Location
+        zoom: 15,
+      }
       });
 
       mapInstance.current.on('load', () => {
-        new mapplsClassObject.Marker({
-          map: mapInstance.current,
-          position: { lat: 22.5726, lng: 88.3639 },
-        });
+      new mapplsClassObject.Marker({
+        map: mapInstance.current,
+        position: { lat: 22.61, lng: 88.47 },
       });
-    });
+      });    });
 
     return () => {
       if (mapInstance.current) {

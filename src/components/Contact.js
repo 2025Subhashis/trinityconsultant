@@ -56,9 +56,9 @@ function Contact() {
               <h4>Address</h4>
               <p className="clickable-address" onClick={toggleMap} style={{ cursor: 'pointer', color: '#007bff' }}>
                 Trinity Consultant<br />
-                Mani Casa Building<br />
-                Opposite Ecopark<br />
-                Kolkata, WB, India
+                New Town, Rajarhat<br />
+                Kolkata, West Bengal<br />
+                India
               </p>
             </div>
 
