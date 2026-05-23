@@ -1,0 +1,7 @@
+.careers { padding: 50px 0; }
+.jobs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 30px; }
+.job-card { border: 1px solid #ddd; padding: 20px; border-radius: 8px; }
+.application-form { margin-top: 50px; background: #f9f9f9; padding: 30px; border-radius: 8px; }
+.application-form form { display: flex; flex-direction: column; gap: 15px; }
+.application-form input, .application-form select { padding: 10px; }
+.success { color: green; font-weight: bold; }

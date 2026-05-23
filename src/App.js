@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import About from './components/About';
@@ -8,10 +8,10 @@ import Services from './components/Services';
 import Team from './components/Team';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
+import Careers from './components/Careers';
 
 // Placeholder Pages
 const Home = () => <div><About /><Services /><Team /><Testimonials /><Contact /></div>;
-const Careers = () => <div className="container"><h2>Careers</h2><p>Join our team.</p></div>;
 const Blog = () => <div className="container"><h2>Blog</h2><p>Latest news.</p></div>;
 const PrivacyPolicy = () => <div className="container"><h2>Privacy Policy</h2><p>Content here.</p></div>;
 const TermsOfService = () => <div className="container"><h2>Terms of Service</h2><p>Content here.</p></div>;
