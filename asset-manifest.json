@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/trinityconsultant/static/css/main.8c0a8135.css",
-    "main.js": "/trinityconsultant/static/js/main.1b66c070.js",
+    "main.js": "/trinityconsultant/static/js/main.a416e3a5.js",
     "index.html": "/trinityconsultant/index.html",
     "main.8c0a8135.css.map": "/trinityconsultant/static/css/main.8c0a8135.css.map",
-    "main.1b66c070.js.map": "/trinityconsultant/static/js/main.1b66c070.js.map"
+    "main.a416e3a5.js.map": "/trinityconsultant/static/js/main.a416e3a5.js.map"
   },
   "entrypoints": [
     "static/css/main.8c0a8135.css",
-    "static/js/main.1b66c070.js"
+    "static/js/main.a416e3a5.js"
   ]
 }
