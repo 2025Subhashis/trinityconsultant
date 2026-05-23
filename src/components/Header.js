@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Header.css';
+import { Link } from 'react-router-dom';
 
 function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -18,9 +19,9 @@ function Header() {
         <div className="container navbar-content">
           <div className="logo">
             <h1>
-              <a href="#home" onClick={handleNavClick}>
+              <Link to="/" onClick={handleNavClick}>
                 Trinity Consultant
-              </a>
+              </Link>
             </h1>
           </div>
           
@@ -41,34 +42,34 @@ function Header() {
             className={`nav-links ${mobileMenuOpen ? 'active' : ''}`}
           >
             <li>
-              <a href="#home" onClick={handleNavClick}>
+              <Link to="/" onClick={handleNavClick}>
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#services" onClick={handleNavClick}>
+              <Link to="/about" onClick={handleNavClick}>
+                About
+              </Link>
+            </li>
+            <li>
+              <Link to="/services" onClick={handleNavClick}>
                 Services
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#team" onClick={handleNavClick}>
+              <Link to="/team" onClick={handleNavClick}>
                 Team
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#testimonials" onClick={handleNavClick}>
-                Testimonials
-              </a>
-            </li>
-            <li>
-              <a href="#contact" onClick={handleNavClick}>
+              <Link to="/contact" onClick={handleNavClick}>
                 Contact
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#careers" onClick={handleNavClick}>
+              <Link to="/careers" onClick={handleNavClick}>
                 Careers
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

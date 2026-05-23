@@ -1,5 +1,6 @@
 import React from 'react';
 import './Footer.css';
+import { Link } from 'react-router-dom';
 
 function Footer() {
   const currentYear = new Date().getFullYear();
@@ -25,30 +26,30 @@ function Footer() {
             <div className="footer-section">
               <h4>Services</h4>
               <ul>
-                <li><a href="#executive-search">Executive Search</a></li>
-                <li><a href="#technical-recruitment">Technical Recruitment</a></li>
-                <li><a href="#contract-staffing">Contract Staffing</a></li>
-                <li><a href="#career-consulting">Career Consulting</a></li>
+                <li><Link to="/services">Executive Search</Link></li>
+                <li><Link to="/services">Technical Recruitment</Link></li>
+                <li><Link to="/services">Contract Staffing</Link></li>
+                <li><Link to="/services">Career Consulting</Link></li>
               </ul>
             </div>
 
             <div className="footer-section">
               <h4>Company</h4>
               <ul>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#careers">Careers</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><Link to="/about">About Us</Link></li>
+                <li><Link to="/careers">Careers</Link></li>
+                <li><Link to="/blog">Blog</Link></li>
+                <li><Link to="/contact">Contact</Link></li>
               </ul>
             </div>
 
             <div className="footer-section">
               <h4>Legal</h4>
               <ul>
-                <li><a href="#privacy">Privacy Policy</a></li>
-                <li><a href="#terms">Terms of Service</a></li>
-                <li><a href="#cookie-policy">Cookie Policy</a></li>
-                <li><a href="#sitemap">Sitemap</a></li>
+                <li><Link to="/privacy">Privacy Policy</Link></li>
+                <li><Link to="/terms">Terms of Service</Link></li>
+                <li><Link to="/cookie">Cookie Policy</Link></li>
+                <li><Link to="/sitemap">Sitemap</Link></li>
               </ul>
             </div>
           </div>
