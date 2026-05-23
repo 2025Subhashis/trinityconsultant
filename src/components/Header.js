@@ -41,6 +41,11 @@ function Header() {
             className={`nav-links ${mobileMenuOpen ? 'active' : ''}`}
           >
             <li>
+              <a href="#home" onClick={handleNavClick}>
+                Home
+              </a>
+            </li>
+            <li>
               <a href="#services" onClick={handleNavClick}>
                 Services
               </a>
