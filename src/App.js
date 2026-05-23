@@ -20,7 +20,7 @@ const Sitemap = () => <div className="container"><h2>Sitemap</h2><p>Content here
 
 function App() {
   return (
-    <Router basename="/trinityconsultant">
+    <Router>
       <div className="App">
         <Header />
         <main id="main-content">
