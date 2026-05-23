@@ -5,7 +5,7 @@ import './MapModal.css';
 const MapModal = ({ isOpen, onClose }) => {
   useEffect(() => {
     if (isOpen) {
-      const ACCESS_TOKEN = "YOUR_MAPPLS_ACCESS_TOKEN"; // TODO: Insert your API Key here
+      const ACCESS_TOKEN = "cdb403820542bcb2ca8c53a611e8f462"; // TODO: Insert your API Key here
       const mapplsClassObject = new mappls();
       mapplsClassObject.initialize(ACCESS_TOKEN, () => {
         const map = mapplsClassObject.Map({
