@@ -20,36 +20,29 @@ const MapModal = ({ isOpen, onClose }) => {
 
       console.log("mapplsClassObject:", mapplsClassObject);
 
-      mapplsClassObject.initialize(ACCESS_TOKEN, () => {
-        console.log("Mappls initialized, creating map...");
-
-        if (!mapplsClassObject.Map) {
-          console.error("mapplsClassObject.Map is undefined. Check SDK initialization.");
-          return;
-        }
-
-        const map = mapplsClassObject.Map({
-          id: 'map-container',
-          properties: {
-            center: [22.61, 88.47],
-            zoom: 15,
-          }
-        });
-
-        console.log("Map object created:", map);
-        if (map && typeof map.on === 'function') {
-          mapInstance.current = map;
-          map.on('load', () => {
-            console.log("Map loaded, adding marker...");
-            new mapplsClassObject.Marker({
-              map: mapInstance.current,
-              position: { lat: 22.61, lng: 88.47 },
+    mapplsClassObject.initialize(ACCESS_TOKEN, () => {
+        console.log("Mappls initialized, attempting to create map via Mappls.Map...");
+        
+        // Alternative initialization pattern often seen in documentation
+        try {
+            const map = new window.mappls.Map('map-container', {
+                center: [22.61, 88.47],
+                zoom: 15,
             });
-          });
-        } else {
-          console.error("Map creation failed or map object is invalid:", map);
+            console.log("Map object created:", map);
+            
+            mapInstance.current = map;
+            map.addListener('load', () => {
+                console.log("Map loaded, adding marker...");
+                new window.mappls.Marker({
+                    map: map,
+                    position: { lat: 22.61, lng: 88.47 },
+                });
+            });
+        } catch (error) {
+            console.error("Error creating map instance:", error);
         }
-      });
+    });
     };
 
     // Small delay to ensure DOM is ready
