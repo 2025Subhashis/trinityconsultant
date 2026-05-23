@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Careers.css';
+import ApplicationForm from './ApplicationForm';
 
 const jobs = [
   { id: 1, title: 'Full Stack Developer', domain: 'IT', experience: '3-5 years', location: 'Kolkata', description: 'Build scalable web applications using React and Node.js.' },
@@ -13,6 +14,7 @@ function Careers() {
   const [searchTerm, setSearchTerm] = useState('');
   const [filterDomain, setFilterDomain] = useState('');
   const [expandedJobId, setExpandedJobId] = useState(null);
+  const [applyingJob, setApplyingJob] = useState(null);
 
   const filteredJobs = jobs.filter(job => 
     (job.title.toLowerCase().includes(searchTerm.toLowerCase()) || job.location.toLowerCase().includes(searchTerm.toLowerCase())) &&
@@ -46,13 +48,14 @@ function Careers() {
               {expandedJobId === job.id && (
                 <div className="job-details">
                   <p>{job.description}</p>
-                  <button className="apply-btn">Apply Now</button>
+                  <button className="apply-btn" onClick={() => setApplyingJob(job)}>Apply Now</button>
                 </div>
               )}
             </div>
           ))}
         </div>
       </div>
+      {applyingJob && <ApplicationForm job={applyingJob} onClose={() => setApplyingJob(null)} />}
     </section>
   );
 }
