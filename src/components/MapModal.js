@@ -8,7 +8,7 @@ const MapModal = ({ isOpen, onClose }) => {
   useEffect(() => {
     if (!isOpen) return;
 
-    const ACCESS_TOKEN = "YOUR_MAPPLS_ACCESS_TOKEN"; // TODO: Insert your API Key here
+    const ACCESS_TOKEN = "cdb403820542bcb2ca8c53a611e8f462"; // TODO: Insert your API Key here
 
     if (ACCESS_TOKEN === "YOUR_MAPPLS_ACCESS_TOKEN") {
       console.error("Please insert a valid Mappls Access Token in MapModal.js");
