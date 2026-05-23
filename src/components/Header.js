@@ -51,6 +51,11 @@ function Header() {
               </a>
             </li>
             <li>
+              <a href="#team" onClick={handleNavClick}>
+                Team
+              </a>
+            </li>
+            <li>
               <a href="#testimonials" onClick={handleNavClick}>
                 Testimonials
               </a>
