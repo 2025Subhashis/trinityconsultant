@@ -1,44 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Services.css';
 
 function Services() {
   const services = [
-    {
-      id: 1,
-      title: 'Executive Search',
-      description: 'Find C-level executives and senior management professionals for your organization.',
-      icon: '👔'
-    },
-    {
-      id: 2,
-      title: 'Technical Recruitment',
-      description: 'Connect with skilled software engineers, developers, and IT professionals.',
-      icon: '💻'
-    },
-    {
-      id: 3,
-      title: 'Contract Staffing',
-      description: 'Flexible staffing solutions for short-term and project-based needs.',
-      icon: '📋'
-    },
-    {
-      id: 4,
-      title: 'Career Consulting',
-      description: 'Professional guidance to advance your career and achieve your goals.',
-      icon: '🎯'
-    },
-    {
-      id: 5,
-      title: 'Training & Development',
-      description: 'Upskill your workforce with industry-relevant training programs.',
-      icon: '📚'
-    },
-    {
-      id: 6,
-      title: 'HR Solutions',
-      description: 'Comprehensive HR services including payroll, compliance, and administration.',
-      icon: '🤝'
-    }
+    { id: 1, title: 'Executive Search', slug: 'executive-search', description: 'Find C-level executives and senior management professionals for your organization.', icon: '👔' },
+    { id: 2, title: 'Technical Recruitment', slug: 'technical-recruitment', description: 'Connect with skilled software engineers, developers, and IT professionals.', icon: '💻' },
+    { id: 3, title: 'Contract Staffing', slug: 'contract-staffing', description: 'Flexible staffing solutions for short-term and project-based needs.', icon: '📋' },
+    { id: 4, title: 'Career Consulting', slug: 'career-consulting', description: 'Professional guidance to advance your career and achieve your goals.', icon: '🎯' },
+    { id: 5, title: 'Training & Development', slug: 'training-development', description: 'Upskill your workforce with industry-relevant training programs.', icon: '📚' },
+    { id: 6, title: 'HR Solutions', slug: 'hr-solutions', description: 'Comprehensive HR services including payroll, compliance, and administration.', icon: '🤝' }
   ];
 
   return (
@@ -63,9 +34,9 @@ function Services() {
               </div>
               <h3>{service.title}</h3>
               <p>{service.description}</p>
-              <a href={`#${service.title.toLowerCase().replace(/\s+/g, '-')}`} className="service-link">
+              <Link to={`/services/${service.slug}`} className="service-link">
                 Learn more <span aria-hidden="true">→</span>
-              </a>
+              </Link>
             </article>
           ))}
         </div>

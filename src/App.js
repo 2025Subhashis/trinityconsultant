@@ -9,6 +9,7 @@ import Team from './components/Team';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Careers from './components/Careers';
+import ServiceDetail from './components/ServiceDetail';
 
 // Placeholder Pages
 const Home = () => <div><About /><Services /><Team /><Testimonials /><Contact /></div>;
@@ -28,6 +29,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/services/:slug" element={<ServiceDetail />} />
             <Route path="/team" element={<Team />} />
             <Route path="/careers" element={<Careers />} />
             <Route path="/blog" element={<Blog />} />
